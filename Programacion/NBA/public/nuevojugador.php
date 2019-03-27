@@ -3,6 +3,7 @@ require './../src/jugador.php';
 
 $jugador=new Jugador();
 $error = $jugador-> comprobarCampos($_POST);
+
 if (isset($error)){
   if($error==false){
     // No hey error
@@ -16,18 +17,20 @@ if (isset($error)){
   <head>
     <meta charset="utf-8">
     <title></title>
-    <link rel="stylesheet" href="css/index.css" type="text/css"></link>
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
   </head>
   <body>
     <!-- Menu Navegacion -->
     <?php include "./assets/navSup.php"?>
-    <?php include "./assets/footer.php"?>
     <?php if (isset($error)) {
     echo $error;
-} ?>
+    }
+  ?> 
+
+<div class="formulario">
+    <h1><p>Nuevo Jugador</p></h1>
   <!-- Formulario de insercion -->
-    <form class="formNBA" action="nuevojugador.php" method="post">
-      <h2><p>Nuevo Jugador</p>
+    <h2><form class="formNBA" action="nuevojugador.php" method="post">
       <div class="grupoForItem">
         <label for="codigo">Codigo</label>
         <br>
@@ -46,6 +49,9 @@ if (isset($error)){
       <div class="grupoForItem">
         <input type="submit" name="Enviar" value="Insert">
       </div>
+    </div>
   </form>
+  <!-- Pie de pagina -->
+  <?php include "./assets/footer.php"?>
   </body>
 </html>

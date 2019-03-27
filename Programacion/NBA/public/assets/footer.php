@@ -1,4 +1,5 @@
-
 <footer>
-  <p><h3>Aitor Herrero Miquel</p>
+  <div>
+  <p id="footer">Aitor Herrero Miquel</p>
+  </div>
 </footer>

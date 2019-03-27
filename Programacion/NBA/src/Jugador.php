@@ -9,12 +9,12 @@ class Jugador
 {
   private $conexion=null;
   private $codigo;
-  private $nombre;
+  public $nombre;
   private $peso;
 
     public function __construct()
     {
-      
+
     }
     /*Para entrada array $_POST*/
     /*Para salida string con el $error
@@ -48,8 +48,28 @@ class Jugador
 
     public function insertarJugador(){
       $consulta="INSERT INTO jugadores (codigo, Nombre, Procedencia, Altura, Peso, Posicion, Nombre_equipo)
-                  VALUES ($this->codigo, '$this->nombre', NULL, NULL, $this->peso, NULL, NULL)";
+                  VALUES ($this->codigo, $this->nombre, NULL, NULL, $this->peso, NULL, NULL)";
       $this->conexion->query($consulta);
+      $this->codigo=$_POST["Codigo"]=="";
+      $this->nombre=$_POST["Nombre"];
+      $this->peso=$_POST["Peso"];
+      echo $consulta;
+    }
+  
+
+    public function listarJugadores(){
+        
+    $consulta= 'SELECT * FROM jugadores WHERE codigo = $codigo, Nombre=$nombre, procedencia=$Procedencia, Altura=$Altura, Peso=$Peso, Posicion=$Posicion, Nombre_equipo=$Nombre_equipo';
+    $result = $this->conexion->query($consulta);
+    return $result;
     }
   }
+
+  // public function setCodigo(){
+  //   if($numero>0) $this->codigonumero;
+  // }
+
+  // public function getCodigo(){
+  //   return $this->codigo;
+  // }
 ?>
