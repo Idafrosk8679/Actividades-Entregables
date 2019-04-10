@@ -1,17 +1,20 @@
 <?php
-require './../src/jugador.php';
+require './../src/Jugador.php';
 
-$jugador=new Jugador();
-$error = $jugador-> comprobarCampos($_POST);
-
-if (isset($error)){
-  if($error==false){
-    // No hey error
-    $jugador-> conexion();
-    $jugador-> insertarJugador();
-  }
-}
+  $j=new Jugador();
+  $j2=new Jugador();
+  $error=$j->comprobarCampos($_POST);
+  $j->setCodigo(-3.5);
+  if(isset($_POST["Codigo"])) { 
+       $j->conexion();
+       $codigo=$_POST["Codigo"];
+      $nombre=$_POST["Nombre"];
+      $peso=$_POST["Peso"];
+    $j->insertarJugador($codigo,$nombre,$peso);
+    
+     }
 ?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>

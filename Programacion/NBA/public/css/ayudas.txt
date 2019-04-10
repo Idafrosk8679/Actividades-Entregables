@@ -1,0 +1,141 @@
+<?php
+    // Imprimir resultantes 
+    while ($fila =mysql_fetch_array($datos)){
+    echo "<p>";
+    echo $fila ["codigo"];
+    echo "-"; // un separador 
+    echo $fila["Nombre"];
+    echo "-"; // un separador
+    echo $fila ["Procedencia"];
+    echo "-"; // un separador
+    echo $fila["Altura"];
+    echo "-"; // un separador
+    echo $fila ["Peso"];
+    echo "-"; // un separador
+    echo $fila ["Posicion"];
+    echo "-"; // un separador
+    echo $fila ["Nombre_equipo"];
+    echo "</p>";
+}
+?>
+
+
+
+
+
+<table class="table table-striped">
+  	
+		<thead>
+		<tr>
+			<th>ID</th>
+			<th>NOMBRE</th>
+			<th>PROCEDENCIA</th>
+			<th>ALTURA</th>
+			<th>PESO</th>
+			<th>POSICION</th>
+			<th>NOMBRE EQUIPO</th>
+		</tr>
+		</thead>
+<?php while ($row = mysql_fetch_array($result)){?>
+	<td><?php $row['id'] ?></td>
+    <td><?php $row['Nombre'] ?></td>
+    <td><?php $row['Procedencia'] ?></td>
+    <td><?php $row['Altura'] ?></td>
+    <td><?php $row['Peso'] ?></td>
+    <td><?php $row['Posicion'] ?></td>
+    <td><?php $row['Nombre_equipo'] ?></td>
+	
+<?php} ?>
+</table>
+
+
+ WHERE Codigo = $codigo, Nombre=$nombre, Procedencia=$Procedencia, Altura=$Altura, Peso=$Peso, Posicion=$Posicion, Nombre_equipo=$Nombre_equipo';
+
+
+
+
+ function tabular ($result){
+//Abrimos la etiqueta table una sola vez:
+$codigo = '<table border="1" cellpadding="3">';
+
+//Vamos acumulando de a una fila "tr" por vuelta:
+while ($fila = @mysql_fetch_array($result) ) {
+
+$codigo .= '<tr>';
+
+//vamos acumulando tantos "td" como sea necesario:
+$codigo .= '<td>'.utf8_encode($fila["id"]).'</td>';
+
+$codigo .= '<td>'.utf8_encode($fila["nombre"]).'</
+td>';
+$codigo .= '<td>'.utf8_encode($fila["apellido"]).'</
+td>';
+$codigo .= '<td>'.utf8_encode($fila["edad"]) .'</
+td>';
+$codigo .= '<td>'.utf8_encode($fila["pais"]) .'</
+td>';
+$codigo .= '<td>'.utf8_encode($fila
+["especialidad"]).'</td>';
+
+//cerramos un "tr":
+$codigo .= '</tr>';
+}
+//finalizandoell bucle, cerramos por unica vez la tabla:
+$codigo .='</table>';
+
+return $codigo;
+}7
+
+
+
+
+
+
+  // public function setCodigo(){
+  //   if($numero>0) $this->codigonumero;
+  // }
+
+  // public function getCodigo(){
+  //   return $this->codigo;
+  // }
+
+
+
+
+      <!-- <?php
+      foreach ($jugador AS $jugador) {
+        echo .$jugador['Nombre'].;
+      }
+    ?>
+
+  public function insertarJugador(){
+      $query = 'SELECT codigo, Nombre, Procedencia, Altura, Peso, Posicion, Nombre_equipo FROM nba'
+    }
+
+
+
+
+
+
+    <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+</head>
+<body>
+     <!-- Menu Navegacion -->
+    <?php include "./assets/navSup.php";?>
+    <?php 
+    if (isset($error)) {
+    echo $error;
+    }
+    ?>
+ 
+    <!-- Pie de pagina -->
+<?php include "./assets/footer.php";?>
+</body>
+</html>
+
+require './../src/Jugador.php';

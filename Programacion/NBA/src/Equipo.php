@@ -1,13 +1,14 @@
 <?php
 /*
-*Jugador
+*Equipo
 */
-class Jugador
+class Equipo
 {
   private $conexion=null;
-  private $codigo;
   public $nombre;
-  private $peso;
+  private $ciudad;
+  private $conferencia;
+  private $division;
 
     public function __construct()
     {
@@ -21,14 +22,16 @@ class Jugador
     public function comprobarCampos($post)
     {
         $error = null;
-        if (!isset($_POST) || !isset($_POST["Codigo"]) || !isset($_POST["Nombre"]) || !isset($_POST["Peso"])) {
+        if (!isset($_POST) || !isset($_POST["Nombre"]) || !isset($_POST["Ciudad"]) || !isset($_POST["Conferencia"]) || !isset($_POST["Division"])) {
             $error="No has enviado nada";
-        } elseif ($_POST["Codigo"]=="") {
-            $error="No has introducido el Codigo";
         } elseif ($_POST["Nombre"]=="") {
             $error="No has introducido el Nombre";
-        } elseif ($_POST["Peso"]=="") {
-            $error="No has introducido el Peso";
+        } elseif ($_POST["Ciudad"]=="") {
+            $error="No has introducido la Ciudad";
+        } elseif ($_POST["Conferencia"]=="") {
+            $error="No has introducido la Conferencia";
+        } elseif ($_POST["Division"]=="") {
+            $error="No has introducido la Division";
         }else{
           $error = false;
 
@@ -42,29 +45,19 @@ class Jugador
           echo "Fallo al conectar a MySQL: (" . $this->conexion->connect_errno . ") " . $this->conexion->connect_error;
       }
     }
-    
-    
 
-    public function insertarJugador($codigo,$nombre,$peso){
-      $consulta="INSERT INTO jugadores (Codigo, Nombre, Procedencia, Altura, Peso, Posicion, Nombre_equipo)
-                  VALUES ('$codigo', '$nombre', NULL, NULL, '$peso', NULL, NULL)" ;
+    public function insertarEquipo($nombre,$ciudad,$conferencia,$division){
+      $consulta="INSERT INTO equipos (Nombre, Ciudad, Conferencia, Division)
+                  VALUES ('$nombre', '$ciudad', '$conferencia', '$division')" ;
       $this->conexion->query($consulta);
       echo $consulta;
     }
   
-    public function listarJugador(){
-      $consulta="SELECT * FROM jugadores WHERE Codigo:$codigo";
+    public function listarEquipo(){
+      $consulta="SELECT * FROM equipos WHERE Nombre:$nombre";
       $resultado=$this->conexion->query($consulta);
 
       return $resultado;
     }
-
-  public function setCodigo($numero){
-    if($numero>0) $this->codigo=numero;
-  }
-
-  public function getCodigo(){
-    return $this->codigo;
-  }
 }
 ?>
