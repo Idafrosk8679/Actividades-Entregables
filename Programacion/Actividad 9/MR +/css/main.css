@@ -1,0 +1,150 @@
+/* Fondo */
+html, body   {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #34495e;
+}
+
+/* Barra navegacion */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #5D4954;
+  height: 70px;
+}
+
+/* Posicionamiento*/
+header nav a {
+  display: inline-block;
+  color: #CFC9C8;
+  text-decoration: none;
+  padding: 10px 30px;
+  line-height: normal;
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-transition: all 100ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+header nav {
+  float: center;
+  line-height: 100px;
+}
+
+/* Boton log out */
+input.enlace {
+  border: 0;
+  background-color:transparent;
+  color: #000;
+  cursor: pointer;
+  margin-left: 300px;
+}
+
+
+/* Tamaño y posicion de tablero */
+
+table {
+  width: 350px;
+  height: 350px;
+  font-size: 35px;
+  text-align: center;
+  border-spacing: 20px;
+  border:0px;
+  margin:5px;
+  /* margin-top: -500px; */
+}
+
+#Patatablademierda {
+  border: solid;
+  margin-left: 30%;
+  margin-right: 40%;
+  margin-top: -0.5%;
+  position: sticky;
+  border-collapse: collapse;
+  border-style: hidden;
+}
+
+/* Dados */
+
+#inum {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.textodadosI{
+  margin-left: 50px;
+}
+
+
+#fnum {
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 14%;
+  margin-top:-0.06%;
+} 
+
+.textodadosF {
+  margin-left: 180.5px;
+  margin-top: -4.50%;
+}
+
+/* Contador de movimientos */
+
+#NumeroM {
+  backface-visibility: visible;
+  position: absolute;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  background: #847c7d;
+  border-radius: 5px;
+  border: 1px solid #e02f0c;
+  border-width: 1px 1px 1px 1px;
+  padding: 1px 15px 1px 15px;
+  box-shadow: inset 0px 1px 0px #ffffff, 0px 1px 3px rgba(0%, 0%, 0%, 0.3);
+  color: #fff;
+  font-size: 16px;
+  font-family: monospace;
+  font-weight: 900;
+  font-style: normal;
+  text-shadow: 0px -1px 0px rgba(185, 16, 16, 0.4) border-left(-70%);
+  margin-top: -12%;
+  margin-top: 7%;
+  margin-left: 25px;
+}
+
+a.pregunta{
+  font-size: 2px;
+  background-color: red;
+}
+
+
+button.enlace{
+color: #20bf6b !important;
+text-transform: uppercase;
+background: #ffffff;
+padding: 20px;
+border: 4px solid #20bf6b !important;
+border-radius: 6px;
+display: inline-block;
+}
+
+button.enlace#Nuevo_Juego{
+  margin-right: 100px;
+  margin-left: 1420px;
+}
+
+.enlace:hover {
+color: #494949 !important;
+border-radius: 50px;
+border-color: #494949 !important;
+transition: all 0.3s ease 0s;
+}

@@ -1,0 +1,3 @@
+1. Solucionar verificacion de usuario y contraseña y realizar login
+2. Solucionar problemas mysli registro y rfealizar registro
+3. Solucionanr problemas lista usuarios

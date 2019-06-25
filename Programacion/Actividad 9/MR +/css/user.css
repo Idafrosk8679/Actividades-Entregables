@@ -1,0 +1,78 @@
+/* Fondo */
+html, body   {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #34495e;
+}
+
+/* Barra navegacion */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #5D4954;
+  height: 70px;
+}
+
+/* Posicionamiento*/
+header nav a {
+  display: inline-block;
+  color: #CFC9C8;
+  text-decoration: none;
+  padding: 10px 30px;
+  line-height: normal;
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-transition: all 100ms ease;
+  -o-transition: all 500ms ease;
+  transition: all 500ms ease;
+}
+
+header nav {
+  float: center;
+  line-height: 100px;
+}
+
+/* Boton log out */
+input.enlace {
+  border: 0;
+  background-color:transparent;
+  color: #000;
+  cursor: pointer;
+  margin-left: 300px;
+}
+
+
+li{
+  float: left;
+}
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.formNBA{
+  margin-top: 10px;
+}
+
+.grupoFormItem{
+  margin-top: 10px;
+}
+
+h1{
+  color: Grey;
+}
+
+/* Boton log out */
+input.enlace {
+  border: 0;
+  background-color:transparent;
+  color: #000;
+  cursor: pointer;
+  margin-left: 300px;
+}
