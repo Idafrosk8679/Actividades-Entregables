@@ -1,7 +1,7 @@
 <header>
 <nav>
     <a href="listadoUsuarios.php">Usuarios</a>
-    <a href="Juego.php">Micro Robots</a>
+    <a href="juego.php">Micro Robots</a>
   <ul>
   
 
